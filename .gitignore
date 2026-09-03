@@ -1,0 +1,9 @@
+venv/
+env/
+
+# Cache do python
+
+__pycach__/
+*.pyc
+# Arquivos de ambiente (caso usem faturamento)
+.env
