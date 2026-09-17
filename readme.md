@@ -1,52 +1,34 @@
-📚 Book API
-Uma API RESTful completa e eficiente para gerenciamento de livros, desenvolvida para facilitar o cadastro, consulta, atualização e remoção de obras literárias.
+# 📚 Book API
 
-👤 Autoria
-Desenvolvedor: Lorenzo Müller Cardoso
+Uma API RESTful completa, eficiente e didática para o gerenciamento de livros, desenvolvida em **Python** com **FastAPI**. A aplicação permite realizar operações de cadastro, consulta, atualização e remoção de obras literárias de forma simples e rápida.
 
-Projeto: API de Gerenciamento de Livros
+## 👤 Autor
 
-🚀 Rotas da API
+- **Desenvolvedor:** Lorenzo Müller Cardoso
+- **Projeto:** API de Gerenciamento de Livros
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Linguagem:** Python 3+
+- **Framework Web:** FastAPI
+- **ORM / Banco de Dados:** SQLAlchemy
+- **Validação de Dados:** Pydantic
+- **Formato de Resposta:** JSON
+
+## 🚀 Rotas da API
+
 A API conta com as 5 rotas principais do padrão REST:
 
-📖 1. Listar Todos os Livros
-Método: GET
+| Método | Rota | Descrição | Status de Sucesso |
+|---|---|---|---|
+| `GET` | `/livros` | Retorna a lista completa de todos os livros cadastrados. | `200 OK` |
+| `GET` | `/livros/{id_livro}` | Busca e retorna os detalhes de um livro específico pelo ID. | `200 OK` |
+| `POST` | `/livros` | Cadastra um novo livro no banco de dados. | `201 Created` |
+| `PUT` | `/livros/{id_livro}` | Atualiza todas as informações de um livro existente. | `200 OK` |
+| `DELETE` | `/livros/{id_livro}` | Remove permanentemente um livro do sistema pelo ID. | `200 OK` / `204 No Content` |
 
-Rota: /livros
+## 📖 Documentação Interativa (Swagger & ReDoc)
 
-Descrição: Retorna a lista completa de todos os livros cadastrados no sistema.
+Graças ao **FastAPI**, a API conta com documentação interativa gerada automaticamente. Após iniciar o servidor localmente, você pode acessá-la através do seu navegador nas rotas `/docs` (Swagger UI) ou `/redoc` (ReDoc).
 
-🔍 2. Buscar Livro por ID
-Método: GET
-
-Rota: /livros/:id
-
-Descrição: Busca e retorna os detalhes de um livro específico com base no ID informado.
-
-➕ 3. Cadastrar Novo Livro
-Método: POST
-
-Rota: /livros
-
-Descrição: Adiciona um novo livro ao banco de dados. Requer os dados da obra no corpo da requisição (body).
-
-✏️ 4. Atualizar Livro
-Método: PUT
-
-Rota: /livros/:id
-
-Descrição: Atualiza as informações de um livro existente identificado pelo seu ID.
-
-🗑️ 5. Deletar Livro
-Método: DELETE
-
-Rota: /livros/:id
-
-Descrição: Remove permanentemente um livro do sistema através do seu ID.
-
-🛠️ Tecnologias Utilizadas
-Linguagem: Python / JavaScript
-
-Framework: Express
-
-Formato de Resposta: JSON
+📌 *Projeto desenvolvido para fins didáticos e demonstrativos.*
